@@ -1,0 +1,246 @@
+/*------------------------------------
+  Base Styles
+------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  font: 1.1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* DesJarlais' name in header */
+h1 {
+  font-size: 5.625rem;
+  /* 90px/16px  converts pixels to em's proportionally*/ 
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .80);
+  margin: 12px 0 0;
+  padding-top: 10px;
+}
+
+h2 {
+  color: #48525c;
+  padding-top: 20px;
+}
+
+/*------------------------------------
+  Main-Styles
+------------------------------------*/
+
+/* sub-text in main header */
+.header__title {
+  color: white;
+  font-size: 1.625rem;
+  /* 26px/16px */
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+/* flag image under gradient */
+.main-header {
+  padding-top: 120px;
+  height: 400px;
+  background: linear-gradient(#063A6C, transparent 90%), linear-gradient(0deg, #fff, transparent), #063A6C url("../images/flag.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* intro paragraph */
+.article__intro {
+  margin: 50px auto;
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+
+/* seperate paragraphs */
+.section__accomplishments {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+/* seperate paragraphs */
+.section__legislation {
+  margin-bottom: 60px;
+}
+
+/* align text */
+.main-footer,
+.main-header, 
+.p__info,
+ h2 {
+  text-align: center;
+}
+
+/* position back to top link */
+.top-link {
+  padding-bottom: 25px;
+  margin-right: 25px;
+
+}
+/* build footer */
+.main-footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* border-bottom: 10px solid #063A6C; */
+  background: linear-gradient(0deg, #fff, transparent), 
+  linear-gradient(#063A6C, transparent 90%);
+  
+  clear: both; 
+}
+
+/*copyright in footer  */
+.footer__copyright--small {
+  font-size: small;
+  padding-left: 25px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* horizontal line effect */
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+ /* remove bullets */
+ .footer__items,
+.legislation__items,
+.membership__items--remove-style {
+  list-style-type: none;
+}
+ /* remove bullets from only two of the list items */
+.legislation__items, .membership__items {
+  line-height: 1.8;
+}
+
+/*------------------------------------
+  Layout Styles
+------------------------------------*/
+
+/* align content */
+.content-wrapper {
+  width: 80%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+/* align images side by side */
+.article__images {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* position footer items */
+.footer__items {
+  display: inline;
+  margin-right: 50px;
+}
+
+/*----------------------------------
+  Floats
+------------------------------------*/
+
+/* left align copyright text */
+.footer__copyright--small {
+  float: left;
+}
+
+/* right align back to top link on bottom of page */
+.top-link {
+  float: right;
+}
+
+/*------------------------------------*\
+  # PSEUDO CLASSES
+\*------------------------------------*/
+
+/* unvisited link */
+
+a:link {
+  color: #063A6C;
+}
+
+/* visited link */
+
+a:visited {
+color: lightgray;
+}
+
+/* mouse over link */
+
+a:hover {
+  color: lightcoral;  
+}
+
+.footer__items a:visited {
+color:#063A6C;
+}
+
+.footer__items a:hover {
+  color:lightcoral;
+  }
+
+/* attempting to change the color of link text of iframe */
+#footer div a:link {
+  color: white;
+}
+
+#footer div a:visited {
+  color: white;
+}
+
+/*------------------------------------*\
+   Media Queries
+-----------------------------------*/
+
+
+@media (max-width:770px) {
+  .article__images {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 30px;
+  }
+
+  .main-header {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width:584px) {
+  .content-wrapper {
+    width:90%;
+    margin: auto;
+  }
+  .footer__items {
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+  }
+  h1 {
+    font-size: 4.75rem;
+  }
+  .header__title {
+    font-size: 1.25rem
+  }
+}
+
+@media (max-width:469px) {
+  .content-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+}
